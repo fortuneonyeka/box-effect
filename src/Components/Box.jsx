@@ -1,11 +1,15 @@
-import React from "react"
+import React,{useState} from "react"
 
 const Box = ({on,ids}) => {
 
+const [onState,setOnState] = useState(on)
 
+const toggleonState = () => {
+  setOnState(prevSetOn => !prevSetOn)
+}
     
     const styles = {
-        backgroundColor: on ? "#222222" : "#b103fc",
+        backgroundColor: onState ? "#222222" : "#b103fc",
         color:"white",
         borderRadius : 10,
         paddingTop:110,
@@ -14,7 +18,7 @@ const Box = ({on,ids}) => {
        
     }
     return (
-        <div style={styles} className="box" >{ids}</div>
+        <div style={styles} className="box" onClick={toggleonState}>{ids}</div>
     )
 }
 
