@@ -1,26 +1,26 @@
 export default [
   {
       id: 1,
-      on: true
+      completed: true
   },   
   {
       id: 2,
-      on: false
+      completed: false
   },   
   {
       id: 3,
-      on: true
+      completed: true
   },   
   {
       id: 4,
-      on: true
+      completed: true
   },   
   {
       id: 5,
-      on: false
+      completed: false
   },   
   {
       id: 6,
-      on: false
+      completed: false
   },   
 ]

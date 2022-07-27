@@ -1,15 +1,15 @@
 import React,{useState} from "react"
 
-const Box = ({on,ids}) => {
+const Box = ({completed,ids}) => {
 
-const [onState,setOnState] = useState(on)
+const [completeState,setCompleteState] = useState(completed)
 
-const toggleonState = () => {
-  setOnState(prevSetOn => !prevSetOn)
+const toggleCompleteState = () => {
+  setCompleteState(prevSetOn => !prevSetOn)
 }
     
     const styles = {
-        backgroundColor: onState ? "#222222" : "#b103fc",
+        backgroundColor: completeState ? "#228c22" : "#b103fc",
         color:"white",
         borderRadius : 10,
         paddingTop:110,
@@ -17,8 +17,10 @@ const toggleonState = () => {
         margin: 10,
        
     }
+
+  
     return (
-        <div style={styles} className="box" onClick={toggleonState}>{ids}</div>
+        <div style={styles} className="box" onClick={toggleCompleteState}>{ids}</div>
     )
 }
 

@@ -5,14 +5,9 @@ import "./App.css"
 
 export default function App() {
     const [squares, setSquares] = React.useState(boxes)
-    
-    // const handleBox = () => {
-    //   setSquares(prevState =>[...prevState, !prevState])
-    // }
-
 
     const squareElements = squares.map(square => (
-        <Box key={square.id} on={square.on} ids={square.id} /> 
+        <Box key={square.id} completed={square.completed} ids={square.id} /> 
     ))
 
     
